@@ -59,18 +59,8 @@ const Nav = () => {
           >
             home
           </Link>
-          <a
-            href="#"
-            className={router.pathname === "/services" && styles.activeLink}
-          >
-            services
-          </a>
-          <a
-            href="#"
-            className={router.pathname === "/about" && styles.activeLink}
-          >
-            about
-          </a>
+          <Link href="/contact">demo</Link>
+          <Link href="/contact">demo</Link>
         </div>
         <div className={styles.navContact}>
           <button className={styles.topSearchBtn}>

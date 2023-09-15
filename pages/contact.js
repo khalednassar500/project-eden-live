@@ -10,7 +10,9 @@ const Contact = () => {
   return (
     <>
       <MainLoading loading={loading} />
-      <h1>contact</h1>
+      <section style={{ padding: "20vh 0", textAlign: "center" }}>
+        <img style={{ width: "200px" }} src="/assets/icons/comming-soon.svg" />
+      </section>
     </>
   );
 };

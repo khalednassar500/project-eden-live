@@ -4,7 +4,7 @@ const MainLoading = ({ loading }) => {
     <div
       className={`${styles.mainLoading} ${!loading && styles.removeLoading}`}
     >
-      ssss
+      <img src="/assets/icons/loading.svg" alt="loading icon" />
     </div>
   );
 };

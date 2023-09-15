@@ -20,7 +20,6 @@ body {
 }
 
 body {
-  min-height: 2000px;
 }
 
 @media (prefers-color-scheme: dark) {
