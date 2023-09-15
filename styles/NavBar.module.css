@@ -1,0 +1,264 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  padding: calc(var(--main-h-padding) / 2) var(--main-h-padding);
+}
+.navLogo {
+  display: flex;
+  align-items: stretch;
+  width: 33%;
+}
+.navLogo img {
+  width: 4vw;
+  min-width: 50px;
+}
+.navLogo p {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.9rem;
+  margin-left: 0.5vw;
+  letter-spacing: 0.1rem;
+  color: #005c99;
+  background: -webkit-linear-gradient(bottom right, #efefef, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navLinks {
+  width: 33%;
+  text-align: center;
+}
+.navLinks a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  margin: 0 0.5vw;
+  display: inline-block;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  position: relative;
+  padding: 0.5vw;
+}
+
+.navLinks a::after {
+  content: "";
+  width: 60%;
+  height: 5px;
+  background: rgba(128, 0, 32, 0.5);
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  filter: blur(5px);
+  border-radius: 100%;
+  opacity: 0;
+}
+.navLinks a:hover::after {
+  transition: 0.2s ease-in-out;
+  opacity: 1;
+}
+.navLinks a:hover {
+  transition: 0.2s ease-in-out;
+  color: #005c99;
+}
+.navLinks .activeLink {
+  pointer-events: none;
+  user-select: none;
+  color: #005c99;
+}
+
+.navContact {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navContact button {
+  cursor: pointer;
+}
+.topSearchBtn {
+  width: 4vw;
+  height: 4vw;
+  min-height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  padding: 1%;
+  border: 1px solid lightgray;
+  background-color: transparent;
+  outline: 0;
+}
+.topSearchBtn:hover {
+  transition: 0.2s;
+  background: lightgray;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 10px 0px;
+}
+.topSearchBtn img {
+  width: 100%;
+  display: flex;
+}
+.topContactUs {
+  border: 3px solid;
+  height: calc(4vw - 3px);
+  min-height: 40px;
+  padding: 0 calc(var(--main-h-padding) / 2);
+  font-size: 1.4rem;
+  margin-left: 2vw;
+  border-image: linear-gradient(45deg, #005c99, #f5f5f5, #800020) 1;
+  font-weight: 600;
+  text-transform: capitalize;
+  background-color: transparent;
+  white-space: nowrap;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+.topContactUs:hover {
+  transition: 0.2s;
+  background: lightgray;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 10px 0px;
+}
+.navScrolling {
+  background-color: rgba(242, 242, 242, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/*-- responsive design --*/
+.resNavBtn {
+  border: none;
+  width: 25px;
+  display: none;
+  background-color: transparent;
+}
+.resNavBtn div {
+  width: 100%;
+  border: 1px solid;
+  margin: 7px 0;
+  transition: 0.2s;
+}
+.showResNavBtn div:nth-child(1) {
+  transform: rotate(45deg);
+  transform-origin: left center;
+}
+.showResNavBtn div:nth-child(2) {
+  opacity: 0;
+}
+.showResNavBtn div:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: left center;
+}
+.resContactBtn {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: var(--main-h-padding);
+  right: var(--main-h-padding);
+  padding: 1px;
+  display: none;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  z-index: 2;
+  background-color: rgba(242, 242, 242, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.resContactBtn img {
+  width: 100%;
+}
+
+@media screen and (min-width: 2000px) {
+  .navLogo p {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .navLinks a {
+    font-size: 2rem;
+  }
+  .topContactUs {
+    font-size: 1.5vw;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .navLinks {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 998px) {
+  .navLogo p {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin-left: 5px;
+  }
+  .navLinks a {
+    font-size: 1.1rem;
+  }
+  .topContactUs {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .navLinks {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(242, 242, 242, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .showNav .navLinks {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    justify-content: center;
+  }
+  .showNav .navLinks a {
+    margin: 5vh 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .resNavBtn {
+    display: block;
+  }
+  .navContact {
+    width: auto;
+  }
+  .topContactUs {
+    display: none;
+  }
+  .resContactBtn {
+    display: block;
+  }
+  .navLogo {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  .navLogo p {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+  .navLogo img {
+    min-width: 40px;
+  }
+  .topSearchBtn {
+    padding: 3px;
+  }
+}
