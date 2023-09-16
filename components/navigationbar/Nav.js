@@ -56,11 +56,16 @@ const Nav = () => {
           <Link
             href="/"
             className={router.pathname === "/" && styles.activeLink}
+            onClick={() => setShowNav(false)}
           >
             home
           </Link>
-          <Link href="/contact">demo</Link>
-          <Link href="/contact">demo</Link>
+          <Link href="/contact" onClick={() => setShowNav(false)}>
+            demo
+          </Link>
+          <Link href="/contact" onClick={() => setShowNav(false)}>
+            demo
+          </Link>
         </div>
         <div className={styles.navContact}>
           <button className={styles.topSearchBtn}>

@@ -144,6 +144,7 @@
 .resNavBtn div {
   width: 100%;
   border: 1px solid;
+  background-color: #000;
   margin: 7px 0;
   transition: 0.2s;
 }
