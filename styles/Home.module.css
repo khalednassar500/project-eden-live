@@ -22,13 +22,12 @@
   color: #000;
   font-size: 4.7vw;
   text-align: center;
-  white-space: nowrap;
   line-height: 7.5vw;
   letter-spacing: 0.2vw;
   text-transform: capitalize;
   font-family: "Orbitron", sans-serif;
   font-weight: 900;
-  max-width: 100%;
+  width: 100%;
 }
 .headerFront h1 span {
   color: #005c99;
